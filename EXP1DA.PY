@@ -1,0 +1,26 @@
+import pandas as pd
+import numpy as np
+import os
+downloads_path = os.path.expanduser("~/Downloads/s.csv")
+df = pd.read_csv(downloads_path)
+df.describe()
+mean_english_grade = df['english.grade'].mean()
+print(f"Mean of English grade: {mean_english_grade}")
+mean_english_grade = df['english.grade'].mean()
+print(f"Mean of english grade: {mean_english_grade}")
+median_english_grade = df['english.grade'].median()
+print(f"Median of english grade: {median_english_grade}")
+mode_english_grade = df['english.grade'].mode()[0]
+print(f"Mode of english grade: {mode_english_grade}")
+variance_english_grade = df['english.grade'].var()
+print(f"Variance of english grade: {variance_english_grade}")
+std_dev_english_grade = df['english.grade'].std()
+print(f"Standard Deviation of english grade: {std_dev_english_grade}")
+total_english_students = df['english.grade'].count()
+print(f"Total number of students in English: {total_english_students}")
+min_age = df['age'].min()
+print(f"Minimum age: {min_age}")
+max_age = df['age'].max()
+print(f"Maximum age: {max_age}")
+total_age = df['age'].sum()
+print(f"Total age: {total_age}")

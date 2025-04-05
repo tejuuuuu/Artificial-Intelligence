@@ -1,0 +1,23 @@
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+data = np.random.randn(1000)
+plt.figure(figsize=(15, 10))
+plt.subplot(2, 3, 1)
+plt.plot(data)
+plt.title('Grid Plot')
+plt.grid(True)
+plt.subplot(2, 3, 2)
+plt.hist(data, bins=30, color='blue')
+plt.title('Histogram')
+plt.subplot(2, 3, 3)
+plt.hist(data, bins=30, color='green')
+plt.title('Histogram')
+plt.subplot(2, 3, 4)
+sns.histplot(data, kde=True, color='red')
+plt.title('Displot')
+plt.subplot(2, 3, 5)
+sns.boxplot(data, color='purple')
+plt.title('Box Plot')
+plt.tight_layout()
+plt.show()
